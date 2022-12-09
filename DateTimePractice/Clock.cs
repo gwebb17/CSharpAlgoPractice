@@ -148,6 +148,52 @@ namespace DateTimePractice
         }
 
 
+        //#9 Ask user for a word. Return the letter that occurs most in the word.
+        //public void CountLettersMethod(string answer9A)
+        //{
+        //    Dictionary<char, int> dictionary9A = new Dictionary<char, int>(); //create empty dictionary object
+        //    var value = 0;
+        //    foreach (char letter in answer9A)
+        //    {
+        //        for (int i = 0; i < answer9A.Length; i++)
+        //        {
+        //            if (letter != answer9A[i])
+        //            {
+        //                value = 1;
+        //            }
+        //            else
+        //            {
+        //                value++;
+                        
+        //            }
+        //        }
+        //        dictionary9A.Add(letter, value); //breaks program because key has already been added to dictionary
+
+        //    }
+            
+        //    Console.WriteLine(dictionary9A.Keys);
+            
+        //}
+
+
+        //#10. Ask user for a word. Return every other letter in the word as a string.
+        public string SkipLettersMethod(out string SkipLettersMethodResult, string answer10A)
+        {
+            string holder10A = ""; //make empty string outside of for loop and if statement so it can be used outside of them
+
+            for (int i = 0; i < answer10A.Length; i++)
+            {
+                if (i == 0 || i % 2 == 0) //if current iteration is 0 index or i == even number add that index to string
+                {
+                    holder10A += Convert.ToString(answer10A[i]);
+                }
+            }
+            SkipLettersMethodResult = holder10A;
+            Console.WriteLine(SkipLettersMethodResult);
+            return SkipLettersMethodResult;
+        }
+
+
 
     }
 }

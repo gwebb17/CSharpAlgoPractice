@@ -61,16 +61,29 @@ namespace DateTimePractice
 
             //#8
             //Write a C# Sharp program that takes user inputs, turns them into a List, and finds the average of the List 
-            Console.WriteLine("#1");
+            Console.WriteLine("Find average #1");
             int answer8A = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("#2");
+            Console.WriteLine("Find average #2");
             int answer8B = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("#3");
+            Console.WriteLine("Find average #3");
             int answer8C = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("#4");
+            Console.WriteLine("Find average #4");
             int answer8D = Convert.ToInt32(Console.ReadLine());
             List<int> list8A = new List<int>(){answer8A, answer8B, answer8C, answer8D};   //Have to instantiate first since its a list
             clockenspiel.AverageMethod(out double AverageMethodResult, list8A);
+
+
+            //#9 Ask user for a word. Return the letter that occurs most in the word.
+            //Console.WriteLine("Enter a word");
+            //string answer9A = Console.ReadLine();
+            //clockenspiel.CountLettersMethod(answer9A);
+
+
+            //#10. Ask user for a word. Return every other letter in the word as a string.
+            Console.WriteLine("Enter a word");
+            string answer10A = Console.ReadLine();
+            clockenspiel.SkipLettersMethod(out string SkipLettersMethodResult, answer10A);
+
 
 
 
