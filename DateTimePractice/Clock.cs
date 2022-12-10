@@ -195,5 +195,182 @@ namespace DateTimePractice
 
 
 
+        //#11. Take two colors as strings. Return the result of the two colors combined.
+        public void TwoColorsMethod(string answer11A, string answer11B)
+        {
+            string lower11A = answer11A.ToLower(); //make 1st answer lowercase for less error likelihood
+            string shade11A = ""; //this will be set to 1st answers general shade inside below loop to give us a smaller pool of shades to mix
+
+            string lower11B = answer11B.ToLower();
+            string shade11B = "";
+
+            
+           
+            //1st answer logic
+            if (lower11A == "red" || lower11A == "maroon" || lower11A == "burgundy")
+            {
+                shade11A = "red"; //if answer 1 is like red then set shade = red
+            }
+            else if (lower11A == "yellow" || lower11A == "gold")
+            {
+                shade11A = "yellow"; //if answer 1 is like yellow set shade = yellow
+            }
+            else if (lower11A == "blue" || lower11A == "turquoise" || lower11A == "cyan")
+            {
+                shade11A = "blue";
+            }
+            else if (lower11A == "orange")
+            {
+                shade11A = "orange";
+            }
+            else if (lower11A == "purple" || lower11A == "violet" || lower11A == "lavendar")
+            {
+                shade11A = "purple";
+            }
+            else if (lower11A == "green")
+            {
+                shade11A = "green";
+            }
+            else if (lower11A == "white")
+            {
+                shade11A = "white";
+            }
+            else if (lower11A == "black" || lower11A == "grey" || lower11A == "gray")
+            {
+                shade11A = "black";
+            }
+
+
+            //2nd answer logic
+            if (lower11B == "red" || lower11B == "maroon" || lower11B == "burgundy")
+            {
+                shade11B = "red"; //if answer 1 is like red then set shade = red
+            }
+            else if (lower11B == "yellow" || lower11B == "gold")
+            {
+                shade11B = "yellow"; //if answer 1 is like yellow set shade = yellow
+            }
+            else if (lower11B == "blue" || lower11B == "turquoise" || lower11B == "cyan")
+            {
+                shade11B = "blue";
+            }
+            else if (lower11B == "orange")
+            {
+                shade11B = "orange";
+            }
+            else if (lower11B == "purple" || lower11B == "violet" || lower11B == "lavendar")
+            {
+                shade11B = "purple";
+            }
+            else if (lower11B == "green")
+            {
+                shade11B = "green";
+            }
+            else if (lower11B == "white")
+            {
+                shade11B = "white";
+            }
+            else if (lower11B == "black" || lower11B == "grey" || lower11B == "gray")
+            {
+                shade11B = "black";
+            }
+
+            //COLOR vars (need to set these in order to search using .Contains())
+            string red11 = "red";
+            string blue11 = "blue";
+            string green11 = "green";
+            string yellow11 = "yellow";
+            string orange11 = "orange";
+            string purple11 = "purple";
+            string white11 = "white";
+            string black11 = "black";
+
+
+            string combined11AB = shade11A + shade11B;  //have to combine them below the above logic or else value isn't updated
+            string TwoColorsMethodResult = "";
+
+
+            //Final logic to determine final shade
+            if (combined11AB.Contains(red11) && combined11AB.Contains(yellow11)) //by using .Contains we avoid making double the logic to check
+                                                                                 //the possible combinations of strings
+            {
+                TwoColorsMethodResult = orange11;
+                Console.WriteLine(TwoColorsMethodResult);
+            }
+            else if (combined11AB.Contains(yellow11) && combined11AB.Contains(blue11))
+            {
+                TwoColorsMethodResult = green11;
+                Console.WriteLine(TwoColorsMethodResult);
+            }
+            else if (combined11AB.Contains(blue11) && combined11AB.Contains(red11))
+            {
+                TwoColorsMethodResult = purple11;
+                Console.WriteLine(TwoColorsMethodResult);
+            }
+            else if (combined11AB.Contains(red11) && combined11AB.Contains(orange11))
+            {
+                TwoColorsMethodResult = "red orange";
+                Console.WriteLine(TwoColorsMethodResult);
+            }
+            else if (combined11AB.Contains(yellow11) && combined11AB.Contains(green11))
+            {
+                TwoColorsMethodResult = "yellow green";
+                Console.WriteLine(TwoColorsMethodResult);
+            }
+            else if (combined11AB.Contains(blue11) && combined11AB.Contains(purple11))
+            {
+                TwoColorsMethodResult = "blue violet";
+                Console.WriteLine(TwoColorsMethodResult);
+            }
+            else if (combined11AB.Contains(red11) && combined11AB.Contains(purple11))
+            {
+                TwoColorsMethodResult = "red violet";
+                Console.WriteLine(TwoColorsMethodResult);
+            }
+            else if (combined11AB.Contains(yellow11) && combined11AB.Contains(orange11))
+            {
+                TwoColorsMethodResult = "yellow orange";
+                Console.WriteLine(TwoColorsMethodResult);
+            }
+            else if (combined11AB.Contains(blue11) && combined11AB.Contains(green11))
+            {
+                TwoColorsMethodResult = "blue green";
+                Console.WriteLine(TwoColorsMethodResult);
+            }
+            //FOR WHITE
+            else if (combined11AB.Contains(white11))
+            {
+                string holderWhite = "light "; //our adjective to describe a lighter shade if white is involved
+                if (shade11A.Contains(white11)) //need logic to determine which part of user string contains "white"
+                {
+                    holderWhite += shade11B; //since shade11A holds white in this case we can just add the other answer shade11B to result
+                }
+                else if (shade11B.Contains(white11))
+                {
+                    holderWhite += shade11A; 
+                }
+                TwoColorsMethodResult = holderWhite;
+                Console.WriteLine(TwoColorsMethodResult);
+            }
+            //FOR BLACK
+            else if (combined11AB.Contains(black11))
+            {
+                string holderBlack = "dark ";
+                if (shade11A.Contains(black11))
+                {
+                    holderBlack += shade11B;
+                }
+                else if (shade11B.Contains(black11))
+                {
+                    holderBlack += shade11A;
+                }
+                TwoColorsMethodResult = holderBlack;
+                Console.WriteLine(TwoColorsMethodResult);
+            }
+        }
+        //END TWOCOLORSMETHOD --------------------------------------------------------------------------
+
+
+
     }
 }

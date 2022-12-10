@@ -85,6 +85,13 @@ namespace DateTimePractice
             clockenspiel.SkipLettersMethod(out string SkipLettersMethodResult, answer10A);
 
 
+            //#11. Take two colors as strings. Return the color that combining them results in.
+            Console.WriteLine("Enter color #1");
+            string answer11A = Console.ReadLine();
+            Console.WriteLine("Enter color #2");
+            string answer11B = Console.ReadLine();
+            clockenspiel.TwoColorsMethod(answer11A, answer11B);
+
 
 
 
