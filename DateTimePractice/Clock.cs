@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace DateTimePractice
 {
@@ -369,6 +370,30 @@ namespace DateTimePractice
             }
         }
         //END TWOCOLORSMETHOD --------------------------------------------------------------------------
+
+        //#12. Unfinished
+
+        //#13. Take an array of integers (pos or neg) and return the absolute value of the sum of them. (Absolute value meaning to remove
+        //any negative sign in front of the integers).
+        //**USING ELEMENTAT REQUIRES the using statement: Using System.Linq; in top
+        public void AbsoluteSumMethod(int answer13A, int answer13B, int answer13C, int answer13D)
+        {
+            int[] holdingArray13 = new int[4]; //Must define amount of indices for array
+            holdingArray13[0] = answer13A;
+            holdingArray13[1] = answer13B;
+            holdingArray13[2] = answer13C;
+            holdingArray13[3] = answer13D;
+
+            for (int i = 0; i < holdingArray13.Length; i++)
+            {
+                if (holdingArray13[i] < 0)
+                {
+                    holdingArray13[i] *= -1;
+                }
+                int AbsoluteSumMethodResult = holdingArray13[0] + holdingArray13[1] + holdingArray13[2] + holdingArray13[3];
+                Console.WriteLine(AbsoluteSumMethodResult);
+            }
+        }
 
 
 

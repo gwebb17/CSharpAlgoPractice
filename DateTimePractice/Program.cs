@@ -93,6 +93,54 @@ namespace DateTimePractice
             clockenspiel.TwoColorsMethod(answer11A, answer11B);
 
 
+            //#12. Shoes are either L or R. A  pair is a L and R adjacent to each other. There can be multiple pairs next to each if adjacent (LLRR or RRLL//LLLRRR RRR LLL).
+            //Workers can grab any amount of pairs but they have to be adjacent. Return the amount of workers required for the String S. 
+            //public string myFunction(string S)
+            //{
+            //    List<string> holdingList = new List<string>();
+
+            //    for (int i = 0; i < S.Length; i++)
+            //    {
+            //        if (S[i] + S[i + 1] == 'LR' || S[i] + S[i + 1] == 'RL')
+            //        {
+            //            holdingList.Add("pair"); 
+            //        }
+            //        else if (S[i] + S[i + 1] == 'LL')
+            //        {
+            //            holdingList.Add("ll");
+            //        }
+            //        else if (S[i] + S[i + 1] == 'RR')
+            //        {
+            //            holdingList.Add("rr");
+            //        }
+            //        i++;
+            //    }
+
+            //    int result = 0;
+
+            //    for (int j = 0; j < holdingList.Count; j++)
+            //    {
+            //        if (holdingList[j].Contains("pair"))
+            //        {
+            //            result++;
+            //        }
+            //    }
+            //}
+
+            //#13. Take an array of integers (pos or neg) and return the absolute value of the sum of them. (Absolute value meaning to remove
+            //any negative sign in front of the integers).
+            Console.WriteLine("Enter an array of integers to get absolute sum. #1");
+            int answer13A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter an array of integers to get absolute sum. #2");
+            int answer13B = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter an array of integers to get absolute sum. #3");
+            int answer13C = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter an array of integers to get absolute sum. #4");
+            int answer13D = Convert.ToInt32(Console.ReadLine());
+
+            clockenspiel.AbsoluteSumMethod(answer13A, answer13B, answer13C, answer13D);
+
+
 
 
             Console.ReadLine();
