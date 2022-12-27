@@ -9,6 +9,7 @@ namespace DateTimePractice
         {
 
             Clock clockenspiel = new Clock();
+           
 
             //#1
             Console.WriteLine("Enter number 1");
@@ -129,6 +130,7 @@ namespace DateTimePractice
 
             //#13. Take an array of integers (pos or neg) and return the absolute value of the sum of them. (Absolute value meaning to remove
             //any negative sign in front of the integers).
+            //For more practice try to make the input dynamic potentially using a List<> instead of Array.
             Console.WriteLine("Enter an array of integers to get absolute sum. #1");
             int answer13A = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Enter an array of integers to get absolute sum. #2");
@@ -139,6 +141,13 @@ namespace DateTimePractice
             int answer13D = Convert.ToInt32(Console.ReadLine());
 
             clockenspiel.AbsoluteSumMethod(answer13A, answer13B, answer13C, answer13D);
+
+
+            //#14. Take a user input word and return the next letter in the alphabet for the final letter in the entered word.
+            Console.WriteLine("Enter a word (final letter algorithm)");
+            string answer14A = Console.ReadLine();
+
+            clockenspiel.FinalLetterMethod(answer14A);
 
 
 

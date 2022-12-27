@@ -395,6 +395,36 @@ namespace DateTimePractice
             }
         }
 
+        //#14. Take a user input word and return the next letter in the alphabet for the final letter in the entered word.
+        public void FinalLetterMethod(string answer14A)
+        {
+            string holding14A = ""; //can't use char for an empty placeholder, (Doesn't require conversion to char later either)
+            string[] holding14B = new string[] {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", //initialize array for alphabet
+            "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
+            string FinalLetterMethodResult = ""; //initialize empty string in order to adjust value in below loops 
+            
+
+            for (int i = 0; i < answer14A.Length; i++)
+            {
+                holding14A = Convert.ToString(answer14A[i]); //answer14A[i] is now equal to the final letter of user entered word.
+
+                if (holding14B.Contains(holding14A))
+                {
+                    for (int j = 0; j < holding14B.Length - 1; j++) //2nd loop to iterate through alphabet array and keep track of where we are
+                    {
+                        if (holding14B[j] == holding14A) //if current letter in alphabet array loop == final letter in user entered word
+                        {
+                            FinalLetterMethodResult = holding14B.ElementAt(j + 1); //result var == array element (letter) at current iterator value + 1
+                            //by using ElementAt we don't get the numeric value of j returned and instead get the ARRAY's value (letter)
+                            //then just increment by 1 element giving us the NEXT element in array and not the next number value of j's iteration
+                            break; //breaking here keeps us from continually increasing j's value when we hit the desired letter matching user input
+                        }
+ 
+                    }
+                }
+            }
+            Console.WriteLine(FinalLetterMethodResult);
+        }
 
 
     }
