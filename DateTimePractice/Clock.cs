@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using System.Linq;
+using System.Linq; //This is necessary to utilize the ElementAt method (used in #14). 
 
 namespace DateTimePractice
 {
@@ -404,7 +404,7 @@ namespace DateTimePractice
             string FinalLetterMethodResult = ""; //initialize empty string in order to adjust value in below loops 
             
 
-            for (int i = 0; i < answer14A.Length; i++)
+            for (int i = 0; i < answer14A.Length; i++) //Unecessary loop, instead set below variable by saying "if (answer14A.Length - 1 == i)
             {
                 holding14A = Convert.ToString(answer14A[i]); //answer14A[i] is now equal to the final letter of user entered word.
 
@@ -415,8 +415,10 @@ namespace DateTimePractice
                         if (holding14B[j] == holding14A) //if current letter in alphabet array loop == final letter in user entered word
                         {
                             FinalLetterMethodResult = holding14B.ElementAt(j + 1); //result var == array element (letter) at current iterator value + 1
+                            Console.WriteLine(FinalLetterMethodResult);
                             //by using ElementAt we don't get the numeric value of j returned and instead get the ARRAY's value (letter)
                             //then just increment by 1 element giving us the NEXT element in array and not the next number value of j's iteration
+                            //ElementAt method requires Using System.Linq 
                             break; //breaking here keeps us from continually increasing j's value when we hit the desired letter matching user input
                         }
  
@@ -425,6 +427,48 @@ namespace DateTimePractice
             }
             Console.WriteLine(FinalLetterMethodResult);
         }
+
+        //#15. Take two strings, return the character(s) that are the same in both strings.
+        //****Needs further revision, currently will return a duplicate char in the event that our test strings have more than one consecutive letter in common.***
+        //Works for words that do not have consecutive letters that are the same however.
+        public void HammingMethod(string answer15A, string answer15B)
+        {
+            List<char> holdingList15 = new List<char>(); //need a list of chars to fill with our resulting same chars later
+
+            for (int i = 0; i < answer15A.Length; i++) //iterate through first answer
+            {
+                for (int j = 0; j < answer15B.Length; j++) //iterate through second answer
+                {
+                    if (answer15A[i].Equals(answer15B[j])) //if current iterator char on first answer == the current iterator char on second answer
+                    {
+                        holdingList15.Add(answer15A[i]); //then we add that char to our result list
+                    }
+                }
+                
+            }
+            
+            for (int h = 0; h < holdingList15.Count; h++) //third loop in order to print the chars that the two strings have in common
+            {
+                Console.WriteLine(holdingList15[h]);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+           
+            
+
+            
 
 
     }

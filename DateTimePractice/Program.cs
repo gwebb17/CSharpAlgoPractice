@@ -9,7 +9,10 @@ namespace DateTimePractice
         {
 
             Clock clockenspiel = new Clock();
-           
+
+            
+
+
 
             //#1
             Console.WriteLine("Enter number 1");
@@ -148,6 +151,14 @@ namespace DateTimePractice
             string answer14A = Console.ReadLine();
 
             clockenspiel.FinalLetterMethod(answer14A);
+
+            //#15. Take two strings as input, return the character(s) that are the same in both strings.
+            Console.WriteLine("Differences in strings challenge, enter string #1");
+            string answer15A = Console.ReadLine();
+            Console.WriteLine("Differences in strings challenge, enter string #2");
+            string answer15B = Console.ReadLine();
+
+            clockenspiel.HammingMethod(answer15A, answer15B);
 
 
 
