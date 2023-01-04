@@ -10,9 +10,15 @@ namespace DateTimePractice
 
             Clock clockenspiel = new Clock();
 
-            
+            //#18. Create function that takes an array of int arrays and returns the largest number out of each array.
+            Console.WriteLine("Enter array of int's #1");
+            string answer18A = Console.ReadLine();
+            Console.WriteLine("Enter array of int's #2");
+            string answer18B = Console.ReadLine();
+            Console.WriteLine("Enter array of int's #3");
+            string answer18C = Console.ReadLine();
 
-
+            clockenspiel.LargestIntArraysMethod(answer18A, answer18B, answer18C);
 
             //#1
             Console.WriteLine("Enter number 1");
@@ -159,6 +165,21 @@ namespace DateTimePractice
             string answer15B = Console.ReadLine();
 
             clockenspiel.HammingMethod(answer15A, answer15B);
+
+            //#16. Create function that takes two numbers, and returns the multiples of the first number by increasing index value
+            //until the value matches the second number.
+            Console.WriteLine("Enter number to be multiplied:");
+            int answer16A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number that will be amount of times previous number is multiplied.");
+            int answer16B = Convert.ToInt32(Console.ReadLine());
+
+            clockenspiel.ArrayMultipleMethod(answer16A, answer16B);
+
+            //#17. Create function that returns "DUCK!" if the string "bomb" exists in the user input. If it does not exist return "Relax, no bomb."
+            Console.WriteLine("Enter string with or without the word 'bomb''");
+            string answer17A = Console.ReadLine();
+
+            clockenspiel.BombStringMethod(answer17A);
 
 
 

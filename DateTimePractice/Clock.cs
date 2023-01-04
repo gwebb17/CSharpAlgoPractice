@@ -42,7 +42,7 @@ namespace DateTimePractice
 
         public string MonthMethod(out string MonthMethodResult, int answer6A)
         {
-            
+
             if (answer6A == 1)
             {
                 MonthMethodResult = "January";
@@ -120,7 +120,7 @@ namespace DateTimePractice
                 MonthMethodResult = "Nothing";
                 return MonthMethodResult;
             }
-            
+
         }
 
         //Loop through an array of user entered values and multiply each item in the array by the array's length
@@ -140,12 +140,12 @@ namespace DateTimePractice
 
 
         //Write a C# Sharp program that takes four numbers as input to calculate and print the average
-        public double AverageMethod(out double AverageMethodResult, List<int>list8A)
+        public double AverageMethod(out double AverageMethodResult, List<int> list8A)
         {
-                int answer8XA = list8A[0] + list8A[1] + list8A[2] + list8A[3];
-                AverageMethodResult = answer8XA / list8A.Count;  //.Count is similar in use to .Length but for Lists
-                Console.WriteLine(AverageMethodResult);
-                return AverageMethodResult;           
+            int answer8XA = list8A[0] + list8A[1] + list8A[2] + list8A[3];
+            AverageMethodResult = answer8XA / list8A.Count;  //.Count is similar in use to .Length but for Lists
+            Console.WriteLine(AverageMethodResult);
+            return AverageMethodResult;
         }
 
 
@@ -165,15 +165,15 @@ namespace DateTimePractice
         //            else
         //            {
         //                value++;
-                        
+
         //            }
         //        }
         //        dictionary9A.Add(letter, value); //breaks program because key has already been added to dictionary
 
         //    }
-            
+
         //    Console.WriteLine(dictionary9A.Keys);
-            
+
         //}
 
 
@@ -205,8 +205,8 @@ namespace DateTimePractice
             string lower11B = answer11B.ToLower();
             string shade11B = "";
 
-            
-           
+
+
             //1st answer logic
             if (lower11A == "red" || lower11A == "maroon" || lower11A == "burgundy")
             {
@@ -348,7 +348,7 @@ namespace DateTimePractice
                 }
                 else if (shade11B.Contains(white11))
                 {
-                    holderWhite += shade11A; 
+                    holderWhite += shade11A;
                 }
                 TwoColorsMethodResult = holderWhite;
                 Console.WriteLine(TwoColorsMethodResult);
@@ -402,7 +402,7 @@ namespace DateTimePractice
             string[] holding14B = new string[] {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", //initialize array for alphabet
             "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"};
             string FinalLetterMethodResult = ""; //initialize empty string in order to adjust value in below loops 
-            
+
 
             for (int i = 0; i < answer14A.Length; i++) //Unecessary loop, instead set below variable by saying "if (answer14A.Length - 1 == i)
             {
@@ -421,7 +421,7 @@ namespace DateTimePractice
                             //ElementAt method requires Using System.Linq 
                             break; //breaking here keeps us from continually increasing j's value when we hit the desired letter matching user input
                         }
- 
+
                     }
                 }
             }
@@ -444,27 +444,69 @@ namespace DateTimePractice
                         holdingList15.Add(answer15A[i]); //then we add that char to our result list
                     }
                 }
-                
+
             }
-            
+
             for (int h = 0; h < holdingList15.Count; h++) //third loop in order to print the chars that the two strings have in common
             {
                 Console.WriteLine(holdingList15[h]);
             }
+        }
 
 
+        //#16. Create function that takes two numbers, and returns the multiples of the first number by increasing index value until the value matches 
+        //the second number.
+        public void ArrayMultipleMethod(int answer16A, int answer16B)
+        {
+            int result16 = 0;
+            for (int i = 1; i < answer16B + 1; i++)
+            {
+                result16 = answer16A * i;
+                Console.WriteLine(result16);
+            }
+        }
 
+        //#17. Create function that returns "DUCK!" if the string "bomb" exists in the user input. If it does not exist return "Relax, no bomb."
+        public void BombStringMethod(string answer17A)
+        {
+            string result17 = answer17A.ToLower();
+            if (result17.Contains("bomb"))
+            {
+                Console.WriteLine("DUCK!");
+            }
+            else
+            {
+                Console.WriteLine("Relax, there is no bomb.");
+            }
+        }
 
+        //#18. Create function that takes 3 arrays of ints and returns the largest number out of each array. Separate each int with a space.
+        public void LargestIntArraysMethod(string answer18A, string answer18B, string answer18C)
+        {
+            string[] stringArray18A = answer18A.Split(' ').ToArray(); //create array of strings containing each number in answer18A
+            int[] intArray18A = Array.ConvertAll(stringArray18A, Int32.Parse); //initialize int[] and fill it with each element in stringArray18A
+            int result18A = intArray18A.Max();
 
+            string[] stringArray18B = answer18B.Split(' ').ToArray();
+            int[] intArray18B = Array.ConvertAll(stringArray18B, Int32.Parse);
+            int result18B = intArray18B.Max();
 
+            string[] stringArray18C = answer18C.Split(' ').ToArray();
+            int[] intArray18C = Array.ConvertAll(stringArray18C, Int32.Parse);
+            int result18C = intArray18C.Max();
 
+            List<int> finalResult18A = new List<int>(); //final result will be list of each Max int from the 3 arrays.
+            finalResult18A.Add(result18A); //add each highest value from the three arrays to our List of int's
+            finalResult18A.Add(result18B);
+            finalResult18A.Add(result18C);
 
-
-
-
-
+            for (int i = 0; i < finalResult18A.Count; i++)
+            {
+                Console.WriteLine(finalResult18A.ElementAt(i)); //print all the elements of our list of highest values.
+            }
 
         }
+
            
             
 
