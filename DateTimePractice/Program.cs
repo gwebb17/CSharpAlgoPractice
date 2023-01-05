@@ -10,15 +10,7 @@ namespace DateTimePractice
 
             Clock clockenspiel = new Clock();
 
-            //#18. Create function that takes an array of int arrays and returns the largest number out of each array.
-            Console.WriteLine("Enter array of int's #1");
-            string answer18A = Console.ReadLine();
-            Console.WriteLine("Enter array of int's #2");
-            string answer18B = Console.ReadLine();
-            Console.WriteLine("Enter array of int's #3");
-            string answer18C = Console.ReadLine();
-
-            clockenspiel.LargestIntArraysMethod(answer18A, answer18B, answer18C);
+            
 
             //#1
             Console.WriteLine("Enter number 1");
@@ -180,6 +172,23 @@ namespace DateTimePractice
             string answer17A = Console.ReadLine();
 
             clockenspiel.BombStringMethod(answer17A);
+
+            //#18. Create function that takes 3 groups of int arrays of any size and returns the largest number out of each array.
+            Console.WriteLine("Enter array of int's #1");
+            string answer18A = Console.ReadLine();
+            Console.WriteLine("Enter array of int's #2");
+            string answer18B = Console.ReadLine();
+            Console.WriteLine("Enter array of int's #3");
+            string answer18C = Console.ReadLine();
+
+            clockenspiel.LargestIntArraysMethod(answer18A, answer18B, answer18C);
+
+            //#19. Collatz Conjecture. If N is even perform N/2. Then if N is odd perform N * 3 + 1. Return the amount of steps is takes
+            //for N to = 1.
+            Console.WriteLine("Collatz Conjecture. Enter a number.");
+            int answer19A = Convert.ToInt32(Console.ReadLine());
+
+            clockenspiel.CollatzMethod(answer19A);
 
 
 

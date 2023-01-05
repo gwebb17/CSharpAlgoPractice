@@ -504,7 +504,34 @@ namespace DateTimePractice
             {
                 Console.WriteLine(finalResult18A.ElementAt(i)); //print all the elements of our list of highest values.
             }
+        }
 
+        //#19. Collatz Conjecture. If N is even perform N/2. Then if N is odd perform N * 3 + 1. Return the amount of steps is takes
+        //for N to = 1.
+        public void CollatzMethod(int answer19A)
+        {
+            int counter19 = 0;
+
+            while (answer19A > 1)
+            {
+                if (answer19A % 2 == 0) //if N is even
+                {
+                    answer19A /= 2;
+                    counter19++;
+                    Console.WriteLine("Current value of N = {0}", answer19A);
+                }
+                else if (answer19A % 2 != 0) //if N is odd
+                {
+                    answer19A = answer19A * 3 + 1;
+                    counter19++;
+                    Console.WriteLine("Current value of N = {0}", answer19A);
+                }
+                else if (answer19A == 1)
+                {
+                    break;
+                }
+                Console.WriteLine("Current # of steps taken = {0}", counter19);
+            }              
         }
 
            
