@@ -10,7 +10,24 @@ namespace DateTimePractice
 
             Clock clockenspiel = new Clock();
 
-            
+
+            //===============UNFINISHED=================
+            //#21. Keep track function. Return how many times a letter or number appears in an array. Separate each value with a space.
+            //Console.WriteLine("Keep track function. Enter any amount of numbers and/or letters, separate each with a space.");
+            //string answer21 = Console.ReadLine();
+
+            //clockenspiel.KeepTrackMethod(answer21);
+
+
+            //#20. Given an array and an int input, return an array containing the two adjacent indices of array that = input.
+            //Console.WriteLine("TwoSum method, enter an array of ints. Separate each int by a space.");
+            //string nums = Console.ReadLine();
+            //Console.WriteLine("TwoSum method, enter target number");
+            //int answer20B = Convert.ToInt32(Console.ReadLine());
+
+            //clockenspiel.TwoSumMethod(nums, answer20B);
+
+
 
             //#1
             Console.WriteLine("Enter number 1");
@@ -189,6 +206,12 @@ namespace DateTimePractice
             int answer19A = Convert.ToInt32(Console.ReadLine());
 
             clockenspiel.CollatzMethod(answer19A);
+
+            //#22. Take a single string as an argument. Return an array containing the inidces of the capital letters of the string.
+            Console.WriteLine("Enter a string containing some capital letters");
+            string answer22 = Console.ReadLine();
+
+            clockenspiel.IndexCapitalLettersMethod(answer22);
 
 
 

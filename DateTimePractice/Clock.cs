@@ -534,6 +534,71 @@ namespace DateTimePractice
             }              
         }
 
+        //#20. Given an array and an int input, return an array containing the two adjacent indices of array that = input.
+        //public void TwoSumMethod(string nums, int target)
+        //{
+        //    string[] stringArray20A = nums.Split(' ').ToArray(); //create array containing each string int from nums
+        //    int[] intArray20A = Array.ConvertAll(stringArray20A, Int32.Parse); //Convert stringArray20A into int Array
+
+        //    Dictionary<int, int> result = new Dictionary<int, int>(); //initialize empty dictionary of ints
+        //    int[] holdingArray20 = new int[2];
+
+        //    //test values: nums = [0, 1, 2, 3, 4, 5]   target = 9;
+
+        //    for (int i = 0; i < intArray20A.Length; i++)
+        //    {
+        //        if (result.ContainsKey(target-nums[i]))
+        //        {
+        //            result = 
+        //        }
+        //    }
+        //}
+
+        //#21. Keep track function. Return how many times a letter or number appears in an array.
+        public void KeepTrackMethod(string answer21)
+        {
+            Dictionary<char, int> tracker = new Dictionary<char, int>(); 
+            int counter = 1; //minimum value is 1 since each char in answer21 must appear at least once
+            string resultKey = "";
+
+            try
+            {
+                for (int i = 0; i < answer21.Length; i++)
+                {
+                    tracker.Add(answer21[i], counter); //add each char from answer21 as a key in our tracker dictionary
+                    resultKey = Convert.ToString(answer21[i]);
+                }
+            } 
+            catch( System.ArgumentException) //using because this is indicator of key already existing in dictionary. workaround for
+            //KeyAlreadyAdded error being thrown. 
+            {
+                counter++;
+                Console.WriteLine("The letter that occurs most is {0}, and it occurs {1} times.", resultKey, counter);
+            }
+        }
+
+        //#22. Take a single string as an argument. Return an array containing the inidces of the capital letters of the string.
+        public void IndexCapitalLettersMethod(string answer22)
+        {
+            char[] charArray22 = answer22.ToCharArray(); //First convert string to Char array so indices can be returned later
+            //by making it a Char Array, we can use the Char.IsUpper() method to check if it's uppercase later
+            
+            int[] resultArray22 = new int[answer22.Length]; //Next initialize our result array which contains ints corresponding 
+            //to indices of result22, we use the length of input string answer22 as array's length
+
+            for (int i = 0; i < charArray22.Length; i++)
+            {  
+               bool finalResult22 = Char.IsUpper(charArray22.ElementAt(i)); //using a boolean to see if every element in the
+                //char array is an uppercase with Char.IsUpper()
+
+               if (finalResult22) //if a char is an uppercase
+               {
+                   resultArray22[i] = i; //add that char's index value to resultArray22 at [i]
+                   Console.WriteLine(resultArray22.ElementAt(i)); //now print the elements of resultArray22
+               }               
+            }
+        }
+
            
             
 
