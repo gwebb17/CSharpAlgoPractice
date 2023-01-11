@@ -10,6 +10,8 @@ namespace DateTimePractice
 
             Clock clockenspiel = new Clock();
 
+            
+
 
             //===============UNFINISHED=================
             //#21. Keep track function. Return how many times a letter or number appears in an array. Separate each value with a space.
@@ -212,6 +214,14 @@ namespace DateTimePractice
             string answer22 = Console.ReadLine();
 
             clockenspiel.IndexCapitalLettersMethod(answer22);
+
+            //#23. Given a fraction as a string, return whether the fraction is greater than 1.0
+            Console.WriteLine("Enter a fraction in the format x/x");
+            string answer23 = Console.ReadLine();
+
+            clockenspiel.FractionMethod(answer23);
+
+
 
 
 

@@ -599,10 +599,36 @@ namespace DateTimePractice
             }
         }
 
-           
+        //#23. Given a fraction as a string, return whether the fraction is greater than 1.0
+        public void FractionMethod(string answer23)
+        {
+            string[] resultArray23 = answer23.Split('/').ToArray();
             
 
-            
+            for (int i = 0; i < resultArray23.Length - 1; i++)
+            {
+                int comparisonIndexA = Convert.ToInt32(resultArray23[i]);
+                int comparisonIndexB = Convert.ToInt32(resultArray23[i + 1]);
+
+                if (comparisonIndexA > comparisonIndexB)
+                {
+                    bool result23;
+                    result23 = true;
+                    Console.WriteLine(result23);
+                }
+                else if (comparisonIndexA <= comparisonIndexB)
+                {
+                    bool result23;
+                    result23 = false;
+                    Console.WriteLine(result23);
+                }                
+            }
+        }
+
+
+
+
+
 
 
     }
