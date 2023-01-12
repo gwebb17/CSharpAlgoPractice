@@ -10,7 +10,14 @@ namespace DateTimePractice
 
             Clock clockenspiel = new Clock();
 
-            
+
+            //#25. Maskify a string. Take a string as input and return a string that obscures all but the last 4 letters as # signs.
+            Console.WriteLine("Enter credit card number to be masked");
+            string answer25 = Console.ReadLine();
+
+            clockenspiel.MaskifyMethod(answer25);
+
+
 
 
 

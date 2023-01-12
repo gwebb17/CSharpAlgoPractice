@@ -657,5 +657,35 @@ namespace DateTimePractice
                 Console.WriteLine("This is not a palindrome");
             }
         }
+
+
+        //#25. Maskify a string. Take a string as input and return a string that obscures all but the last 4 letters as # signs.
+        public void MaskifyMethod(string answer25)
+        {
+            char[] resultString25 = new char[answer25.Length]; 
+
+            if (answer25.Length > 4) //for results with more than 4 digits
+            {
+                answer25.CopyTo(0, resultString25, 0, answer25.Length); //copy everything from answer25 to resultString25
+
+                for (int i = 0; i < resultString25.Length - 4; i++) //go through resultString25 except last 4 digits
+                {
+                    resultString25[i] = '#'; //turn every digit into a '#' (excluding last 4)
+                }
+            }
+            else if (answer25.Length > 0 && answer25.Length <= 4) //for results with 1-4 digits
+            {
+                answer25.CopyTo(0, resultString25, 0, answer25.Length); //copy everything to resultString25
+            }
+            else if (answer25.Length == 0) //for empty results
+            {
+                Console.WriteLine(""); //write blank line
+            }
+        
+            for (int i = 0; i < resultString25.Length; i++)
+            {
+                Console.WriteLine(resultString25.ElementAt(i)); //print all elements of finished resultString25
+            }            
+        }
     }
 }
