@@ -13,6 +13,8 @@ namespace DateTimePractice
             
 
 
+
+
             //===============UNFINISHED=================
             //#21. Keep track function. Return how many times a letter or number appears in an array. Separate each value with a space.
             //Console.WriteLine("Keep track function. Enter any amount of numbers and/or letters, separate each with a space.");
@@ -220,6 +222,16 @@ namespace DateTimePractice
             string answer23 = Console.ReadLine();
 
             clockenspiel.FractionMethod(answer23);
+
+            //#24. Check if a number is a palindrome (the same when written in reverse).
+            Console.WriteLine("Enter a string to see if it's a pallindrome");
+            string answer24 = Console.ReadLine();
+
+            clockenspiel.PalindromeMethod(answer24);
+
+
+
+
 
 
 

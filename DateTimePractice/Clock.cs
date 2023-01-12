@@ -625,11 +625,37 @@ namespace DateTimePractice
             }
         }
 
+        //#24. Check if a number is a palindrome (the same when written in reverse).
+        public void PalindromeMethod(string answer24)
+        {
+            List<char> stringList = new List<char>();
+            List<char> stringListB = new List<char>();
+            
+            foreach (char C in answer24)
+            {
+                stringList.Add(C); //Add each char of answer24 to stringList
+            }
+
+            for (int i = stringList.Count - 1; i > 0; i--)
+            {
+                stringListB.Add(stringList[i]); //Going in descending order (this way the second list stringListB is reversed)               
+            }
+            stringListB.Add(stringList[0]); //Since the above descending iteration won't include the 0 index of stringList, we add it manually after
+
+            string resultString = new string(stringList.ToArray()); //In order to use .Contains we need both lists to be strings or string Arrays
+            string resultStringB = new string(stringListB.ToArray()); //So we convert them to strings using ToArray();
 
 
-
-
-
-
+            if (resultString.Contains(resultStringB)) //Doesn't work when we tried "if resultString.Equals(resultStringB))"
+            //And using multiple loops will be messy and can't overwrite values from outside the loops correctly in this case
+            //We see if resultString.Contains resultStrinB in order to see if they are "equal" strings thereby defining if they are palindromes or not.
+            {
+                Console.WriteLine("This is a palindrome");
+            }
+            else
+            {
+                Console.WriteLine("This is not a palindrome");
+            }
+        }
     }
 }
