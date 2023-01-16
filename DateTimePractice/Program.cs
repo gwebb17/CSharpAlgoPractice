@@ -10,12 +10,10 @@ namespace DateTimePractice
 
             Clock clockenspiel = new Clock();
 
+            
 
-            //#25. Maskify a string. Take a string as input and return a string that obscures all but the last 4 letters as # signs.
-            Console.WriteLine("Enter credit card number to be masked");
-            string answer25 = Console.ReadLine();
 
-            clockenspiel.MaskifyMethod(answer25);
+            
 
 
 
@@ -235,6 +233,18 @@ namespace DateTimePractice
             string answer24 = Console.ReadLine();
 
             clockenspiel.PalindromeMethod(answer24);
+
+            //#25. Maskify a string. Take a string as input and return a string that obscures all but the last 4 letters as # signs.
+            Console.WriteLine("Enter credit card number to be masked");
+            string answer25 = Console.ReadLine();
+
+            clockenspiel.MaskifyMethod(answer25);
+
+            //#26. Create a function that takes any non-negative number as an argument and return it with its digits in descending order.
+            Console.WriteLine("Enter a multi-digit number to sort by descending order.");
+            string answer26 = Console.ReadLine();
+
+            clockenspiel.DescendingOrderMethod(answer26);
 
 
 

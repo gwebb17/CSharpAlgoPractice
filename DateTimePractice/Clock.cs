@@ -687,5 +687,34 @@ namespace DateTimePractice
                 Console.WriteLine(resultString25.ElementAt(i)); //print all elements of finished resultString25
             }            
         }
+
+        //#26. Create a function that takes any non-negative number as an argument and return it with its digits in descending order.
+        public void DescendingOrderMethod(string answer26)
+        {
+            List<char> tempCharList = new List<char>();
+            List<int> tempIntList = new List<int>();
+
+            foreach (char C in answer26)
+            {
+                tempCharList.Add(C);
+            }
+
+            foreach (char D in tempCharList)
+            {
+                int value = (int)Char.GetNumericValue(D); //transpose the elements in char list to their numeric value equivalent (value)
+                tempIntList.Add(value); //add value to tempIntList
+            }
+
+            int[] numbers = tempIntList.ToArray(); //transpose tempIntList into an int Array
+
+            Array.Sort(numbers); //sort array items in ascending order
+            Array.Reverse(numbers); //reverse the array to print descending
+
+            for (int h = 0; h < numbers.Length; h++)
+            {
+                Console.WriteLine(numbers.ElementAt(h));
+            }
+                       
+        }
     }
 }
