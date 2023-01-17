@@ -716,5 +716,47 @@ namespace DateTimePractice
             }
                        
         }
+
+        //#27. Write a function that returns the greatest common divisor of two numbers.
+        public void GCDMethod(int answer27A, int answer27B)
+        {
+            List<int> intList27A = new List<int>(); //initalize two Lists to contain every divisor for each input answer
+            List<int> intList27B = new List<int>();
+
+            for (int i = 1; i < answer27A + 1; i++) // need to say answer27A + 1 because we need the loop to include answer27A as a divisor
+            {                                       // don't need to start at 0 for i since anything divided by 0 is 0/unecessary
+
+                if (answer27A % i == 0)//Iterates through each # including answer27A and finds all divisors 
+                {
+                    int greatestComDivA = i; //continually sets gCDA to divisors of answer27A stopping with highest
+                    intList27A.Add(greatestComDivA); //add each divisor to first List
+                }        
+            }
+            for (int j = 1; j < answer27B + 1; j++) //repeat above loop with second List
+            {
+
+                if (answer27B % j == 0)
+                {
+                    int greatestComDivB = j;
+                    intList27B.Add(greatestComDivB);
+                }
+                
+            }
+
+            List<int> finalResult27 = new List<int>(); //initialize third list to now add values that both Lists have in common below
+
+            for (int k = 0; k < intList27B.Count; k++)
+            {
+                
+                if (intList27A.Contains(intList27B[k])) //if List 1 contains any values that List 2 does...
+                {
+                    finalResult27.Add(intList27B.ElementAt(k)); //add that value to List 3
+                    
+                }               
+            }
+            int[] result = finalResult27.ToArray(); //in order to Sort we need List 3 as an array
+            Array.Sort(result);
+            Console.WriteLine(result.Last()); //now we just need the last element of result Array which will be highest value both holding Lists have in common
+        }
     }
 }

@@ -10,7 +10,13 @@ namespace DateTimePractice
 
             Clock clockenspiel = new Clock();
 
-            
+            //#27. Write a function that returns the greatest common divisor of two numbers.
+            Console.WriteLine("Greatest common divisor function. Enter #1: ");
+            int answer27A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Greatest common divisor function. Enter #2: ");
+            int answer27B = Convert.ToInt32(Console.ReadLine());
+
+            clockenspiel.GCDMethod(answer27A, answer27B);
 
 
             
