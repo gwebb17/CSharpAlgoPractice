@@ -758,5 +758,15 @@ namespace DateTimePractice
             Array.Sort(result);
             Console.WriteLine(result.Last()); //now we just need the last element of result Array which will be highest value both holding Lists have in common
         }
+
+
+        //#28. Create a function that takes a number as an argument and returns a string formatted to separate thousands.
+        public void ConvertThousandsMethod(string answer28)
+        {          
+            answer28 = Convert.ToInt32(answer28).ToString("#,##0");
+            Console.WriteLine(answer28);
+            /*the ToString("#,##0") is a built in method to return a new string with thousands separated by comma. There are also
+            additional ways to format with decimals etc*/
+        }
     }
 }

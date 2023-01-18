@@ -10,18 +10,7 @@ namespace DateTimePractice
 
             Clock clockenspiel = new Clock();
 
-            //#27. Write a function that returns the greatest common divisor of two numbers.
-            Console.WriteLine("Greatest common divisor function. Enter #1: ");
-            int answer27A = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Greatest common divisor function. Enter #2: ");
-            int answer27B = Convert.ToInt32(Console.ReadLine());
-
-            clockenspiel.GCDMethod(answer27A, answer27B);
-
-
             
-
-
 
 
 
@@ -251,6 +240,20 @@ namespace DateTimePractice
             string answer26 = Console.ReadLine();
 
             clockenspiel.DescendingOrderMethod(answer26);
+
+            //#27. Write a function that returns the greatest common divisor of two numbers.
+            Console.WriteLine("Greatest common divisor function. Enter #1: ");
+            int answer27A = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Greatest common divisor function. Enter #2: ");
+            int answer27B = Convert.ToInt32(Console.ReadLine());
+
+            clockenspiel.GCDMethod(answer27A, answer27B);
+
+            //#28. Create a function that takes a number as an argument and returns a string formatted to separate thousands.
+            Console.WriteLine("Enter a number to be formatted with commas separating thousands.");
+            string answer28 = Console.ReadLine();
+
+            clockenspiel.ConvertThousandsMethod(answer28);
 
 
 
