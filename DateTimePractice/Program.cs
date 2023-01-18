@@ -12,6 +12,8 @@ namespace DateTimePractice
 
             
 
+            
+
 
 
 
@@ -254,6 +256,12 @@ namespace DateTimePractice
             string answer28 = Console.ReadLine();
 
             clockenspiel.ConvertThousandsMethod(answer28);
+
+            //#29. Finding Nemo. Given a string of words, if the word "Nemo" is contained within it, return "I found Nemo at [the order of the word].
+            Console.WriteLine("Enter a sentence to find or not find Nemo");
+            string answer29 = Console.ReadLine();
+
+            clockenspiel.FindingNemoMethod(answer29);
 
 
 

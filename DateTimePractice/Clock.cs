@@ -768,5 +768,27 @@ namespace DateTimePractice
             /*the ToString("#,##0") is a built in method to return a new string with thousands separated by comma. There are also
             additional ways to format with decimals etc*/
         }
+
+        //#29. Finding Nemo. Given a string of words, if the word "Nemo" is contained within it, return "I found Nemo at [the order of the word].
+        public void FindingNemoMethod(string answer29)
+        {
+            string[] nemoIndex = answer29.Split(" "); //split answer29 into an array separated by any single space in the word
+
+            if (answer29.Contains("Nemo"))
+            {
+                for (int i = 0; i < nemoIndex.Length; i++)
+                {
+                    if (nemoIndex.ElementAt(i) == "Nemo")
+                    {
+                        Console.WriteLine("I found Nemo at {0}!", i + 1);
+                        break;
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("I can't find Nemo :(");
+            }
+        }
     }
 }
